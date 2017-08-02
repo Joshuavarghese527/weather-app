@@ -6,6 +6,12 @@
     <main>
       <h2>The weather right now in New York</h2>
       <h1><%= @temp %>&deg;</h1>
+        <div>
+        <% @icons.each do |icon| %>
+          <img src="<%= icon %>" alt="weather icon"/>
+        <% end %>
+      </div>
+
     </main>
     <footer>
       <ul>
@@ -17,6 +23,7 @@
         Built with <heart>❤️</heart> 
         by <a href="http://github.com/joshuavarghese527">Joshua Varghese</a>
         from <a href="www.meraki-code.com">Merakicode</a>
+        Icons by <a href="flaticon.com">flaticon</a>.
       </p>
     </footer>
   </body>
