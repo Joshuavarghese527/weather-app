@@ -3,7 +3,21 @@
     <link href="/style.css" rel="stylesheet" />
   </head>
   <body>
-    <h2>The weather right now in New York</h2>
-    <h1><%= @temp %>&deg;</h1>
+    <main>
+      <h2>The weather right now in New York</h2>
+      <h1><%= @temp %>&deg;</h1>
+    </main>
+    <footer>
+      <ul>
+        <% @cities.each do |city| %>
+            <li><a href="/?city=<%= URI.escape(city) %>"><%= city %></a></li>
+        <% end %>
+      </ul>
+      <p>
+        Built with <heart>❤️</heart> 
+        by <a href="http://github.com/joshuavarghese527">Joshua Varghese</a>
+        from <a href="www.meraki-code.com">Merakicode</a>
+      </p>
+    </footer>
   </body>
 </html>
