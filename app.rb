@@ -3,6 +3,7 @@ require 'config_env'
 require_relative 'models/weather.rb'
 
 ConfigEnv.init("#{__dir__}/config/env.rb")
+REDIS = Redis.new(url: ENV['REDIS_URL'])
 
 set :port, 3000
 
