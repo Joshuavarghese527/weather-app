@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'config_env'
 require_relative 'models/weather.rb'
+require 'redis'
 
 ConfigEnv.init("#{__dir__}/config/env.rb")
 REDIS = Redis.new(url: ENV['REDIS_URL'])
